@@ -1,10 +1,8 @@
-const styleReturn = (fontWeight: number) => {
-  return { fontWeight: `${fontWeight}` };
-};
+import styleReturn from '../utils';
 
 const FontWeight = {
-  SMALL: styleReturn(500),
-  BIG: styleReturn(600),
+  SMALL: styleReturn('fontWeight', '500'),
+  BIG: styleReturn('fontWeight', '600'),
 };
 
 export default FontWeight;
