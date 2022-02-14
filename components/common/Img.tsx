@@ -1,10 +1,7 @@
-type IconSizeType = {
-  width: string;
-  height: string;
-};
+import { ObjStringStyle } from "../../types";
 
 interface ImgParams {
-  iconSize: IconSizeType;
+  iconSize: ObjStringStyle;
   src: string;
   alt: string;
 }
