@@ -6,7 +6,7 @@ interface ImgParams {
   alt: string;
 }
 
-const Img = ({ src, alt, iconSize }: ImgParams) => {
+const Img = ({ src, alt, iconSize }: ImgParams): JSX.Element => {
   return <img src={src} alt={alt} style={{ ...iconSize }} />;
 };
 
