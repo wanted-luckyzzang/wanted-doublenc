@@ -1,4 +1,4 @@
-const styleReturn = (...params) => {
+const styleReturn = (...params: string[]) => {
   let obj = {};
   let keys = [];
   let values = [];
