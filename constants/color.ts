@@ -1,8 +1,12 @@
+const styleReturn = (color: string) => {
+  return { color };
+};
+
 const Color = {
-  BLACK: "#000000",
-  POINTRED: "#575757",
-  LIGHTGRAY: "#808080",
-  WHITE: "#FFFFFF",
-  GRAY: "#CCCCCC",
+  BLACK: styleReturn("#000000"),
+  POINTRED: styleReturn("#FF5757"),
+  LIGHTGRAY: styleReturn("#808080"),
+  WHITE: styleReturn("#FFFFFF"),
+  GRAY: styleReturn("#CCCCCC"),
 };
 export default Color;
