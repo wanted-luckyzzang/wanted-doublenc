@@ -1,5 +1,5 @@
 const styleReturn = (fontWeight: number) => {
-  return `${fontWeight}`;
+  return { fontWeight: `${fontWeight}` };
 };
 
 const FontWeight = {

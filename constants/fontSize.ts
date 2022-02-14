@@ -1,5 +1,5 @@
 const styleReturn = (fontSize: number) => {
-  return `${fontSize}px`;
+  return { fontSize: `${fontSize}px` };
 };
 
 const FontSize = {
