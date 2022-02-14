@@ -1,3 +1,4 @@
-import { ModalReduxState } from './modal';
+import { ModalReduxState } from "./modal";
+import { StyleParams, CommonParams, ObjStringStyle } from "./styled";
 
-export type { ModalReduxState };
+export type { ModalReduxState, StyleParams, CommonParams, ObjStringStyle };

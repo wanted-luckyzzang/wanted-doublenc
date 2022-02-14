@@ -1,12 +1,6 @@
-type StyleType = {
-  sx?: { [key: string]: string };
-};
+import { CommonParams } from "../../types";
 
-interface RowPrams extends StyleType {
-  children: React.ReactNode;
-}
-
-const Row = (props: RowPrams): JSX.Element => {
+const Row = (props: CommonParams): JSX.Element => {
   return <div style={{ display: "flex", ...props?.sx }}>{props.children}</div>;
 };
 
