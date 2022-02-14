@@ -1,13 +1,11 @@
-const styleReturn = (width: number, height: number) => {
-  return { width: `${width}px`, height: `${height}px` };
-};
+import styleReturn from '../utils';
 
 const IconSize = {
-  MAINLIST: styleReturn(43, 43),
-  BRANDLIST: styleReturn(36, 36),
-  ITEMLIST: styleReturn(70, 70),
-  BIGMENU: styleReturn(30, 30),
-  SMALLMENU: styleReturn(14, 7),
-  QUESTION: styleReturn(14, 20),
+  MAINLIST: styleReturn('width', '43px', 'height', '43px'),
+  BRANDLIST: styleReturn('width', '36px', 'height', '36px'),
+  ITEMLIST: styleReturn('width', '70px', 'height', '70px'),
+  BIGMENU: styleReturn('width', '30px', 'height', '30px'),
+  SMALLMENU: styleReturn('width', '14px', 'height', '7px'),
+  QUESTION: styleReturn('width', '14px', 'height', '20px'),
 };
 export default IconSize;

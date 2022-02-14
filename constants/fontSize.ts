@@ -1,12 +1,10 @@
-const styleReturn = (fontSize: number) => {
-  return { fontSize: `${fontSize}px` };
-};
+import styleReturn from '../utils';
 
 const FontSize = {
-  ICON: styleReturn(12),
-  SUBHEAD: styleReturn(13),
-  EXPLAIN: styleReturn(14),
-  TITLE: styleReturn(15),
-  HEAD: styleReturn(16),
+  ICON: styleReturn('fontSize', '12px'),
+  SUBHEAD: styleReturn('fontSize', '13px'),
+  EXPLAIN: styleReturn('fontSize', '14px'),
+  TITLE: styleReturn('fontSize', '15px'),
+  HEAD: styleReturn('fontSize', '16px'),
 };
 export default FontSize;
