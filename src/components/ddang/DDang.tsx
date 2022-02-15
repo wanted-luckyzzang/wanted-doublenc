@@ -7,12 +7,12 @@ const DDang = (props: { data: Root }): JSX.Element => {
   return (
     <>
       <MenuTitle />
-      {props.data.map((el) => (
+      {props.data.map((el, idx) => (
         <Link
           key={el.id}
           href={{
             pathname: `/items/${el.id}`,
-            query: { data: JSON.stringify(props.data) },
+            query: { data: el.id },
           }}
           as={`/items/${el.id}`}
         >
