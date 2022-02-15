@@ -1,4 +1,4 @@
-import { CategoryReduxState } from 'src/types';
+import { ObjStringStyle } from 'src/types';
 
 export const INIT = 'category_init';
 
@@ -8,9 +8,7 @@ export const categoryInit = () => {
   };
 };
 
-const initialState: CategoryReduxState = {
-  data: {},
-};
+const initialState: ObjStringStyle = {};
 
 export default function reducer(state = initialState, action) {
   switch (action.type) {
