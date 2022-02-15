@@ -9,6 +9,7 @@ import Header from 'src/components/Header';
 import { BC, C, FS, FW } from 'src/constants';
 import { ObjStringStyle } from 'src/types';
 import styled from 'styled-components';
+import CategoriesHeader from './CategoriesHeader';
 
 const Text = styled.span`
   ${(props: { active: boolean }) =>
@@ -56,11 +57,7 @@ const Categories = (props) => {
           sx={{ ...BC.WHITE, width: '375px', height: '30px', margin: '0 auto' }}
         />
         <Col>
-          <Link href={'/'}>
-            <a>
-              <Header imageUrl="/images/back.svg" text="카페" />
-            </a>
-          </Link>
+          <CategoriesHeader imageUrl="/images/back.svg" text="카페" />
         </Col>
         <Row
           sx={{
