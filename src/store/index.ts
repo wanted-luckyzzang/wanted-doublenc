@@ -1,8 +1,10 @@
 import { createWrapper, HYDRATE } from 'next-redux-wrapper';
 import { applyMiddleware, combineReducers, createStore } from 'redux';
 import modal from './modal';
+import category from './category';
+import brand from './brand';
 
-const rootReducer = combineReducers({ modal });
+const rootReducer = combineReducers({ modal, category, brand });
 
 const reducer = (state, action) => {
   if (action.type === HYDRATE) {
