@@ -2,8 +2,12 @@ import axios from 'axios';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Category } from 'src/components/category/Category';
+import { Col } from 'src/components/common';
+import Header from 'src/components/Header';
+import { BC } from 'src/constants';
 import { INIT } from 'src/store/category';
 import { PaletteType } from 'src/types';
+import styled from 'styled-components';
 
 const Main = ({ categoryData, ddangData }: PaletteType): JSX.Element => {
   const dispatch = useDispatch();
@@ -13,10 +17,17 @@ const Main = ({ categoryData, ddangData }: PaletteType): JSX.Element => {
   }, []);
 
   return (
-    <>
-      <div>메인 페이지 입니다!</div>
-      <Category />
-    </>
+    <Col sx={{ width: '100%', alignItems: 'center' }}>
+      <Col
+        sx={{
+          width: '375px',
+          ...BC.LIGHTGRAY,
+        }}
+      >
+        <Header imageUrl="/images/hamberger.svg" text="니콘내콘" />
+        <Category />
+      </Col>
+    </Col>
   );
 };
 

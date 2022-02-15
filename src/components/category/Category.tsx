@@ -17,6 +17,8 @@ export const Category = () => {
 
 const Wrapper = styled.div`
   display: flex;
+  justify-content: center;
   width: 375px;
   flex-wrap: wrap;
+  margin-top: 16px;
 `;
