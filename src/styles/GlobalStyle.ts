@@ -6,6 +6,10 @@ const GlobalStyle = createGlobalStyle`
     ${reset}
     * {
         box-sizing: border-box;
+        a {
+            text-decoration-line: none;   
+            color: black; 
+        }
     }
 `;
 

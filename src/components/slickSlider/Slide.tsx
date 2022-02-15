@@ -7,7 +7,7 @@ interface SlideProps {
 export const Slide = (props: SlideProps) => {
   return (
     <div>
-      <Img src={props.src} alt={props.alt} iconSize={{ objectFit: 'cover' }} />
+      <Img src={props.src} alt={props.alt} sx={{ objectFit: 'cover' }} />
     </div>
   );
 };

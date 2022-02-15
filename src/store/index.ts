@@ -1,8 +1,6 @@
 import { createWrapper, HYDRATE } from 'next-redux-wrapper';
 import { applyMiddleware, combineReducers, createStore } from 'redux';
 import modal from './modal';
-import category from './category';
-import brand from './brand';
 import { ModalReduxState, ObjStringStyle } from 'src/types';
 
 interface StateType {
@@ -10,11 +8,9 @@ interface StateType {
 }
 export interface StoreState {
   modal: ModalReduxState;
-  category: StateType | null;
-  brand: StateType[] | null;
 }
 
-const rootReducer = combineReducers<StoreState>({ modal, category, brand });
+const rootReducer = combineReducers<StoreState>({ modal });
 
 const reducer = (state, action) => {
   if (action.type === HYDRATE) {
