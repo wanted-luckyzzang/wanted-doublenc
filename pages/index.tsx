@@ -1,14 +1,13 @@
 import axios from 'axios';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { Category } from 'src/components/category/Category';
-import { SlickSlider } from 'src/components/slickSlider/SlickSlider';
+import DDang from 'src/components/ddang/Ddang';
 import { INIT } from 'src/store/category';
 import { PaletteType } from 'src/types';
 
 const Main = ({ categoryData, ddangData }: PaletteType): JSX.Element => {
   const dispatch = useDispatch();
-
+  console.log('main', ddangData);
   useEffect(() => {
     dispatch({ type: INIT, payload: { data: categoryData } });
   }, []);
@@ -16,7 +15,7 @@ const Main = ({ categoryData, ddangData }: PaletteType): JSX.Element => {
   return (
     <>
       <div>메인 페이지 입니다!</div>
-      <SlickSlider />
+      <DDang data={ddangData} />
     </>
   );
 };
@@ -24,12 +23,11 @@ const Main = ({ categoryData, ddangData }: PaletteType): JSX.Element => {
 export async function getServerSideProps() {
   const {
     data: { conCategory1s: categoryData },
-  } = await axios.get(`${process.env.BASE_URL}api/category`);
+  } = await axios.get(`${process.env.BASE_URL}/api/category`);
 
-  const { data: ddangData } = await axios.get(
-    `${process.env.BASE_URL}api/ddang`
-  );
-
+  const {
+    data: { conItems: ddangData },
+  } = await axios.get(`${process.env.BASE_URL}/api/ddang`);
   return {
     props: {
       categoryData,

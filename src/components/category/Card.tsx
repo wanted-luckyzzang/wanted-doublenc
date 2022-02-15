@@ -1,14 +1,9 @@
-import { useSelector } from 'react-redux';
 import { FS, FW } from 'src/constants';
-import { StoreState } from 'src/store';
 import { ObjStringStyle } from 'src/types';
 import styled from 'styled-components';
 import { Col, Img, Text } from '../common';
 
 export const Card = (props: ObjStringStyle): JSX.Element => {
-  const categoryState = useSelector((state: StoreState) => state.category);
-  console.log('categoryState', categoryState);
-  console.log('props', props);
   return (
     <Container>
       <Col sx={{ alignItems: 'center' }}>
