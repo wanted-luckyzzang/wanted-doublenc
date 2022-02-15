@@ -1,4 +1,4 @@
-import { ModalReduxState } from '../types';
+import { ModalReduxState } from 'src/types';
 
 export const OPEN = 'modal_open';
 export const CLOSE = 'modal_close';

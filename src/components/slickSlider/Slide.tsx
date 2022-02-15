@@ -1,4 +1,4 @@
-import { Img } from '../common';
+import { Img } from 'src/components/common';
 
 interface SlideProps {
   [key: string]: string;

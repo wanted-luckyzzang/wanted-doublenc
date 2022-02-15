@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Row } from '../common';
+import { Row } from 'src/components/common';
 
 interface ButtonProps {
   state: number;

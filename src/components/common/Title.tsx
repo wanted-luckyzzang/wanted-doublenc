@@ -1,5 +1,5 @@
-import { C, FS, FW } from "../../constants";
-import { CommonParams } from "../../types";
+import { FS, FW, C } from 'src/constants';
+import { CommonParams } from 'src/types';
 
 const Title = (props: CommonParams): JSX.Element => {
   return (
