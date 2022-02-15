@@ -8,36 +8,37 @@ type HeaderProps = {
 
 const Header = (props: HeaderProps) => {
   return (
-    <Row
-      sx={{
-        backgroundColor: '#FFFFFF',
-        width: '375px',
-        height: '40px',
-        padding: '3px 0 7px 10px',
-        alignItems: 'center',
-      }}
-    >
-      <Img
-        src={props.imageUrl}
-        alt="HeaderIcon"
-        sx={{ ...IS.BIGMENU, marginRight: '98px', cursor: 'pointer' }}
-      />
-      <Text
+    <Row sx={{ width: '100%', justifyContent: 'center' }}>
+      <Row
         sx={{
-          ...FW.BIG,
-          ...FS.TITLE,
-          ...C.BLACK,
-          width: '100px',
-          height: '26px',
-          margin: 'auto',
-          textAlign: 'center',
+          backgroundColor: '#FFFFFF',
+          width: '375px',
+          height: '40px',
+          padding: '3px 0 7px 10px',
           alignItems: 'center',
-          display: 'flex',
-          justifyContent: 'center',
         }}
       >
-        {props.text}
-      </Text>
+        <Img
+          src={props.imageUrl}
+          alt="HeaderIcon"
+          sx={{ ...IS.BIGMENU, marginRight: '98px', cursor: 'pointer' }}
+        />
+        <Text
+          sx={{
+            ...FW.BIG,
+            ...FS.TITLE,
+            ...C.BLACK,
+            height: '26px',
+            width: '100px',
+            textAlign: 'center',
+            alignItems: 'center',
+            display: 'flex',
+            justifyContent: 'center',
+          }}
+        >
+          {props.text}
+        </Text>
+      </Row>
     </Row>
   );
 };
