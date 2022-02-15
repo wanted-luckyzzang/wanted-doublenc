@@ -1,4 +1,4 @@
-import { C, FS, FW, IS } from 'src/constants';
+import { BC, C, FS, FW, IS } from 'src/constants';
 import { Img, Row, Text } from './common';
 
 type HeaderProps = {
@@ -20,7 +20,12 @@ const Header = (props: HeaderProps) => {
       <Img
         src={props.imageUrl}
         alt="HeaderIcon"
-        sx={{ ...IS.BIGMENU, marginRight: '98px', cursor: 'pointer' }}
+        sx={{
+          ...IS.BIGMENU,
+          marginRight: '98px',
+          cursor: 'pointer',
+          ...BC.WHITE,
+        }}
       />
       <Text
         sx={{
@@ -33,6 +38,7 @@ const Header = (props: HeaderProps) => {
           alignItems: 'center',
           display: 'flex',
           justifyContent: 'center',
+          ...BC.WHITE,
         }}
       >
         {props.text}

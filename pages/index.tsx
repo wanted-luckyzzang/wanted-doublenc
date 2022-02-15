@@ -2,8 +2,13 @@ import axios from 'axios';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import DDang from 'src/components/ddang/Ddang';
+import { Category } from 'src/components/category/Category';
+import { Col } from 'src/components/common';
+import Header from 'src/components/Header';
+import { BC } from 'src/constants';
 import { INIT } from 'src/store/category';
 import { PaletteType } from 'src/types';
+import styled from 'styled-components';
 
 const Main = ({ categoryData, ddangData }: PaletteType): JSX.Element => {
   const dispatch = useDispatch();
