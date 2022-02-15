@@ -1,5 +1,3 @@
-import { ObjStringStyle } from 'src/types';
-
 export const INIT = 'category_init';
 
 export const categoryInit = () => {
@@ -8,9 +6,7 @@ export const categoryInit = () => {
   };
 };
 
-const initialState: ObjStringStyle = {};
-
-export default function reducer(state = initialState, action) {
+export default function reducer(state = null, action) {
   switch (action.type) {
     case INIT:
       return {

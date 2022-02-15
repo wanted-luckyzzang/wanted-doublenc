@@ -1,13 +1,12 @@
-import { ObjStringStyle } from 'src/types';
+import { StyleParams } from 'src/types';
 
-interface ImgParams {
-  iconSize: ObjStringStyle;
+interface ImgParams extends StyleParams {
   src: string;
   alt: string;
 }
 
-const Img = ({ src, alt, iconSize }: ImgParams): JSX.Element => {
-  return <img src={src} alt={alt} style={{ ...iconSize }} />;
+const Img = ({ src, alt, sx }: ImgParams): JSX.Element => {
+  return <img src={src} alt={alt} style={{ ...sx }} />;
 };
 
 export default Img;
