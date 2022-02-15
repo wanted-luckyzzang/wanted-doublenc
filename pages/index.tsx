@@ -5,10 +5,10 @@ import DDang from 'src/components/ddang';
 import Header from 'src/components/Header';
 import SlickSlider from 'src/components/slickSlider';
 import { BC } from 'src/constants';
-import { PaletteType, Root } from 'src/types';
+import { ObjStringStyle, Root } from 'src/types';
 
 interface MainProps {
-  categoryData: PaletteType[];
+  categoryData: ObjStringStyle[];
   ddangData: Root;
 }
 

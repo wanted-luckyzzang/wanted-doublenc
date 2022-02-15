@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ObjStringStyle } from 'src/types';
+import { ObjStringStyle, PaletteType } from 'src/types';
 import { Row } from '../common';
 import Card from './Card';
 
