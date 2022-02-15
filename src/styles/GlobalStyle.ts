@@ -9,8 +9,10 @@ const GlobalStyle = createGlobalStyle`
         a {
             text-decoration-line: none;   
             color: black; 
-        }
+        }    
+        body{ -ms-overflow-style: none; } ::-webkit-scrollbar { display: none; }
     }
+    
 `;
 
 export default GlobalStyle;
