@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Category } from 'src/components/category/Category';
+import { SlickSlider } from 'src/components/slickSlider/SlickSlider';
 import { INIT } from 'src/store/category';
 import { PaletteType } from 'src/types';
 
@@ -15,7 +16,7 @@ const Main = ({ categoryData, ddangData }: PaletteType): JSX.Element => {
   return (
     <>
       <div>메인 페이지 입니다!</div>
-      <Category />
+      <SlickSlider />
     </>
   );
 };

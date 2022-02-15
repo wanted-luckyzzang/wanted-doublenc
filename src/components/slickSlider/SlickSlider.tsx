@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useState } from 'react';
 import styled from 'styled-components';
 import { Button } from './Button';
@@ -9,7 +10,12 @@ interface WrapperProps {
 
 export const SlickSlider = () => {
   const [slideIndex, setSlideIndex] = useState<number>(1);
-  console.log(slideIndex);
+  useEffect(() => {
+    const timer = setInterval(() => {
+      slideIndex < 3 ? setSlideIndex(slideIndex + 1) : setSlideIndex(1);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [slideIndex]);
 
   return (
     <>
@@ -37,5 +43,5 @@ const Wrapper = styled.div`
   overflow: 'hidden';
   ${(props: WrapperProps) =>
     props.index && `transform : translate(-${(props.index - 1) * 375}px);`}
-  transition: transform .5s ease-in-out;
+  transition: transform .6s ease-in-out;
 `;
