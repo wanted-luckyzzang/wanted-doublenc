@@ -20,6 +20,7 @@ export interface Root2 {
   isOnlyAccount: number;
   conCategory2Id: number;
   imageUrl: string;
+  options?: string[];
   conCategory2: ConCategory2;
 }
 
