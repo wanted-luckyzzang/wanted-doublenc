@@ -1,29 +1,33 @@
-import { useRouter } from 'next/router';
-import { useSelector } from 'react-redux';
-import { StoreState } from 'src/store';
-import styled from 'styled-components';
-import { Col } from '../common';
+import Link from 'next/link';
+import { ObjStringStyle } from 'src/types';
+import { Row } from '../common';
 import Card from './Card';
 
-export const Category = () => {
-  const categoryState = useSelector((state: StoreState) => state.category);
-  const router = useRouter();
-
+export const Category = (props: { categoryData: ObjStringStyle[] }) => {
   return (
-    <Wrapper>
-      {categoryState?.data.map(({ imageUrl, name, id }) => (
-        <Col key={id} onClick={() => router.push(`/categories/${id}`)}>
-          <Card imgUrl={imageUrl} name={name} />
-        </Col>
+    <Row
+      sx={{
+        display: 'flex',
+        justifyContent: 'center',
+        width: '375px',
+        flexWrap: 'wrap',
+        marginTop: '16px',
+      }}
+    >
+      {props.categoryData.map((el: ObjStringStyle) => (
+        <Link
+          key={el.id}
+          href={{
+            pathname: `/categories/${el.id}`,
+            query: { data: JSON.stringify(props.categoryData) },
+          }}
+          as={`/categories/${el.id}`}
+        >
+          <a>
+            <Card imgUrl={el.imageUrl} name={el.name} />
+          </a>
+        </Link>
       ))}
-    </Wrapper>
+    </Row>
   );
 };
-
-const Wrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  width: 375px;
-  flex-wrap: wrap;
-  margin-top: 16px;
-`;

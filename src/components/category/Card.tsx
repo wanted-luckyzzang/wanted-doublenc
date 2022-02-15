@@ -1,4 +1,3 @@
-import { useSelector } from 'react-redux';
 import { BC, FS, FW } from 'src/constants';
 import { ObjStringStyle } from 'src/types';
 import { Col, Img, Text } from '../common';

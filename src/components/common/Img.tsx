@@ -5,8 +5,8 @@ interface ImgParams extends StyleParams {
   alt: string;
 }
 
-const Img = ({ src, alt, sx }: ImgParams): JSX.Element => {
-  return <img src={src} alt={alt} style={{ ...sx }} />;
+const Img = (props: ImgParams): JSX.Element => {
+  return <img src={props.src} alt={props.alt} style={{ ...props.sx }} />;
 };
 
 export default Img;

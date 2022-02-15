@@ -1,7 +1,8 @@
 import { BC, C, FS, FW } from 'src/constants';
+import { Root2 } from 'src/types';
 import { Col, Img, Row, Text } from '../common';
 
-const Card = ({ data }: any): JSX.Element => {
+const Card = (props: { data: Root2 }): JSX.Element => {
   return (
     <Row
       sx={{
@@ -13,21 +14,21 @@ const Card = ({ data }: any): JSX.Element => {
       }}
     >
       <Img
-        src={data.imageUrl as string}
+        src={props.data.imageUrl as string}
         alt="ddang-icon"
         sx={{ width: '70px', height: '70px', marginRight: '17px' }}
       />
       <Col>
         <Text sx={{ ...FS.EXPLAIN, ...C.LIGHTGRAY, marginBottom: '7px' }}>
-          {data.conCategory2.name}
+          {props.data.conCategory2.name}
         </Text>
-        <Text sx={{ ...FS.HEAD, marginBottom: '13px' }}>{data.name}</Text>
+        <Text sx={{ ...FS.HEAD, marginBottom: '13px' }}>{props.data.name}</Text>
         <Row sx={{ alignItems: 'center' }}>
           <Text
             sx={{ ...FS.HEAD, ...C.POINTRED, marginRight: '9px' }}
-          >{`${data.discountRate}%`}</Text>
+          >{`${props.data.discountRate}%`}</Text>
           <Text sx={{ ...FS.HEAD, ...FW.SMALL, marginRight: '6px' }}>
-            {`${data.ncSellingPrice.toLocaleString()}원`}
+            {`${props.data.ncSellingPrice.toLocaleString()}원`}
           </Text>
           <Text
             sx={{
@@ -36,7 +37,7 @@ const Card = ({ data }: any): JSX.Element => {
               textDecoration: 'line-through',
             }}
           >
-            {`${data.originalPrice.toLocaleString()}원`}
+            {`${props.data.originalPrice.toLocaleString()}원`}
           </Text>
         </Row>
       </Col>
