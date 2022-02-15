@@ -1,4 +1,4 @@
-import { ModalReduxState, CategoryReduxState, BrandReduxState } from './store';
+import { ModalReduxState } from './store';
 import {
   StyleParams,
   CommonParams,
@@ -8,8 +8,6 @@ import {
 
 export type {
   ModalReduxState,
-  CategoryReduxState,
-  BrandReduxState,
   StyleParams,
   CommonParams,
   ObjStringStyle,

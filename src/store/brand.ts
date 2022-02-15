@@ -1,4 +1,4 @@
-import { BrandReduxState } from 'src/types';
+import { ObjStringStyle } from 'src/types';
 
 export const INIT = 'brand_init';
 
@@ -8,9 +8,7 @@ export const brandInit = () => {
   };
 };
 
-const initialState: BrandReduxState = {
-  data: {},
-};
+const initialState: ObjStringStyle = {};
 
 export default function reducer(state = initialState, action) {
   switch (action.type) {

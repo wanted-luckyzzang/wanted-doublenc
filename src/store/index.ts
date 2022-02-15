@@ -3,8 +3,15 @@ import { applyMiddleware, combineReducers, createStore } from 'redux';
 import modal from './modal';
 import category from './category';
 import brand from './brand';
+import { ModalReduxState, ObjStringStyle } from 'src/types';
 
-const rootReducer = combineReducers({ modal, category, brand });
+export interface StoreState {
+  modal: ModalReduxState;
+  category: ObjStringStyle;
+  brand: ObjStringStyle;
+}
+
+const rootReducer = combineReducers<StoreState>({ modal, category, brand });
 
 const reducer = (state, action) => {
   if (action.type === HYDRATE) {
