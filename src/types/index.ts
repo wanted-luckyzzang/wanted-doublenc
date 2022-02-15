@@ -5,6 +5,7 @@ import {
   ObjStringStyle,
   PaletteType,
 } from './styled';
+import { Root, Root2, ConCategory2, ConCategory1 } from './ddangData';
 
 export type {
   ModalReduxState,
@@ -12,4 +13,8 @@ export type {
   CommonParams,
   ObjStringStyle,
   PaletteType,
+  Root,
+  Root2,
+  ConCategory2,
+  ConCategory1,
 };
