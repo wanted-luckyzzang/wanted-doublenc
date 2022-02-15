@@ -7,7 +7,7 @@ const DDang = (props: { data: Root }): JSX.Element => {
     <>
       <MenuTitle />
       {props.data.map((el) => (
-        <Card data={el} />
+        <Card data={el} key={el.id} />
       ))}
     </>
   );
