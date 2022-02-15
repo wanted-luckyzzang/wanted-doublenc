@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { FS, FW } from 'src/constants';
+import { BC, FS, FW } from 'src/constants';
 import { StoreState } from 'src/store';
 import { ObjStringStyle } from 'src/types';
 import styled from 'styled-components';
@@ -15,12 +15,13 @@ export const Card = (props: ObjStringStyle): JSX.Element => {
         <Img
           src={props.imgUrl}
           alt="category-icon"
-          sx={{ width: '43px', height: '43px' }}
+          sx={{ width: '43px', height: '43px', ...BC.WHITE }}
         />
         <Text
           sx={{
             ...FS.ICON,
             ...FW.SMALL,
+            ...BC.WHITE,
             width: 'max-content',
             marginTop: '10px',
           }}
@@ -38,5 +39,6 @@ const Container = styled.div`
   padding: 17px 38px 41px 38px;
   box-sizing: border-box;
   margin: 2px;
+  ${BC.WHITE}
 `;
 export default Card;
