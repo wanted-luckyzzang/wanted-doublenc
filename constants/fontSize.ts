@@ -1,6 +1,7 @@
+import { PaletteType } from '../types';
 import styleReturn from '../utils';
 
-const FontSize = {
+const FontSize: PaletteType = {
   ICON: styleReturn('fontSize', '12px'),
   SUBHEAD: styleReturn('fontSize', '13px'),
   EXPLAIN: styleReturn('fontSize', '14px'),
