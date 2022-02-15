@@ -3,7 +3,7 @@ import { ObjStringStyle, PaletteType } from 'src/types';
 import { Row } from '../common';
 import Card from './Card';
 
-export const Category = (props: { categoryData: ObjStringStyle[] }) => {
+export const BrandsCategory = (props: { categoryData: ObjStringStyle[] }) => {
   return (
     <Row
       sx={{
@@ -18,10 +18,10 @@ export const Category = (props: { categoryData: ObjStringStyle[] }) => {
         <Link
           key={el.id}
           href={{
-            pathname: `/categories/${el.id}`,
+            pathname: `/brands/${el.id}`,
             query: { data: JSON.stringify(props.categoryData), idx },
           }}
-          as={`/categories/${el.id}`}
+          as={`/brands/${el.id}`}
         >
           <a>
             <Card imgUrl={el.imageUrl} name={el.name} />
