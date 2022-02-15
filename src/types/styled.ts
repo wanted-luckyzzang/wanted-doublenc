@@ -12,6 +12,7 @@ interface StyleParams {
 
 interface CommonParams extends StyleParams {
   children: React.ReactNode;
+  onClick?: () => void;
 }
 
 export type { StyleParams, CommonParams, ObjStringStyle, PaletteType };

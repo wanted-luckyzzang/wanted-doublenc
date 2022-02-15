@@ -1,15 +1,20 @@
+import { useRouter } from 'next/router';
 import { useSelector } from 'react-redux';
 import { StoreState } from 'src/store';
 import styled from 'styled-components';
+import { Col } from '../common';
 import Card from './Card';
 
 export const Category = () => {
   const categoryState = useSelector((state: StoreState) => state.category);
+  const router = useRouter();
 
   return (
     <Wrapper>
       {categoryState?.data.map(({ imageUrl, name, id }) => (
-        <Card imgUrl={imageUrl} name={name} key={id} />
+        <Col key={id} onClick={() => router.push(`/categories/${id}`)}>
+          <Card imgUrl={imageUrl} name={name} />
+        </Col>
       ))}
     </Wrapper>
   );
