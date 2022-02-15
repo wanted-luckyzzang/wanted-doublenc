@@ -8,8 +8,8 @@ export const Category = () => {
 
   return (
     <Wrapper>
-      {categoryState?.data.map(({ imageUrl, name }) => (
-        <Card imgUrl={imageUrl} name={name} />
+      {categoryState?.data.map(({ imageUrl, name, id }) => (
+        <Card imgUrl={imageUrl} name={name} key={id} />
       ))}
     </Wrapper>
   );
