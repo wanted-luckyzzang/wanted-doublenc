@@ -5,10 +5,13 @@ import category from './category';
 import brand from './brand';
 import { ModalReduxState, ObjStringStyle } from 'src/types';
 
+interface StateType {
+  data: ObjStringStyle[];
+}
 export interface StoreState {
   modal: ModalReduxState;
-  category: ObjStringStyle;
-  brand: ObjStringStyle;
+  category: StateType | null;
+  brand: StateType[] | null;
 }
 
 const rootReducer = combineReducers<StoreState>({ modal, category, brand });
