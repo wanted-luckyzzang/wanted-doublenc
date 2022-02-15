@@ -1,4 +1,4 @@
-import { ObjStringStyle } from "../../types";
+import { ObjStringStyle } from 'src/types';
 
 interface ImgParams {
   iconSize: ObjStringStyle;

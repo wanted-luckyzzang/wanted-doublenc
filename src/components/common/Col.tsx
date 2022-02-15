@@ -1,8 +1,8 @@
-import { CommonParams } from "../../types";
+import { CommonParams } from 'src/types';
 
 const Col = (props: CommonParams): JSX.Element => {
   return (
-    <div style={{ display: "flex", flexDirection: "column", ...props?.sx }}>
+    <div style={{ display: 'flex', flexDirection: 'column', ...props?.sx }}>
       {props.children}
     </div>
   );

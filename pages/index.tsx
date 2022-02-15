@@ -1,8 +1,8 @@
 import { useSelector } from 'react-redux';
 import styled from 'styled-components';
-import Row from '../components/common/Row';
-import { C, FS, FW, IS } from '../constants';
-import { RootState } from '../store';
+import Row from 'src/components/common/Row';
+import { C, FS, FW, IS } from 'src/constants';
+import { RootState } from 'src/store';
 
 const Wrapper = styled.div`
   background-color: red;
