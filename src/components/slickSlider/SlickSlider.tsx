@@ -29,7 +29,6 @@ const Container = styled.div`
   position: relative;
   width: 375px;
   overflow: hidden;
-  margin: 0 auto;
 `;
 
 const Wrapper = styled.div`
