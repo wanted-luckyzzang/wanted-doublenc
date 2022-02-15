@@ -1,4 +1,4 @@
-import { CommonParams } from 'types';
+import { CommonParams } from 'src/types';
 
 const Col = (props: CommonParams): JSX.Element => {
   return (
