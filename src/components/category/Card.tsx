@@ -1,14 +1,26 @@
 import { useSelector } from 'react-redux';
 import { BC, FS, FW } from 'src/constants';
-import { StoreState } from 'src/store';
 import { ObjStringStyle } from 'src/types';
-import styled from 'styled-components';
 import { Col, Img, Text } from '../common';
 
 export const Card = (props: ObjStringStyle): JSX.Element => {
   return (
-    <Container>
-      <Col sx={{ alignItems: 'center' }}>
+    <Col
+      sx={{
+        width: '112px',
+        height: '93px',
+        borderRadius: '7px',
+        padding: '17px 38px 41px 38px',
+        margin: '2px',
+        cursor: 'pointer',
+        ...BC.WHITE,
+      }}
+    >
+      <Col
+        sx={{
+          alignItems: 'center',
+        }}
+      >
         <Img
           src={props.imgUrl}
           alt="category-icon"
@@ -26,16 +38,8 @@ export const Card = (props: ObjStringStyle): JSX.Element => {
           {props.name}
         </Text>
       </Col>
-    </Container>
+    </Col>
   );
 };
-const Container = styled.div`
-  width: 112px;
-  height: 93px;
-  border-radius: 7px;
-  padding: 17px 38px 41px 38px;
-  box-sizing: border-box;
-  margin: 2px;
-  ${BC.WHITE}
-`;
+
 export default Card;

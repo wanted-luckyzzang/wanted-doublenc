@@ -1,11 +1,12 @@
+import { Root } from 'src/types';
 import Card from './Card';
 import MenuTitle from './MenuTitle';
 
-const DDang = ({ data }: any): JSX.Element => {
+const DDang = (props: { data: Root }): JSX.Element => {
   return (
     <>
       <MenuTitle />
-      {data.map((el) => (
+      {props.data.map((el) => (
         <Card data={el} />
       ))}
     </>

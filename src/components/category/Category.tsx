@@ -5,7 +5,7 @@ import Card from './Card';
 
 export const Category = () => {
   const categoryState = useSelector((state: StoreState) => state.category);
-  console.log(categoryState);
+
   return (
     <Wrapper>
       {categoryState?.data.map(({ imageUrl, name }) => (
