@@ -1,3 +1,3 @@
-import DDang from './Ddang';
+import DDang from './DDang';
 
 export default DDang;
