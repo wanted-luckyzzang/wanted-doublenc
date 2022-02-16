@@ -80,9 +80,7 @@ const SellText = styled.span``;
 export default Qas;
 
 export async function getServerSideProps() {
-  const { data: data } = await axios.get(
-    `${process.env.BASE_URL}/api/faq/type`
-  );
+  const { data: data } = await axios.get('https://api2.ncnc.app/qa-types');
   return {
     props: {
       data,

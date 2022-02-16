@@ -48,11 +48,11 @@ const Main = ({ categoryData, ddangData }: MainProps): JSX.Element => {
 export async function getServerSideProps() {
   const {
     data: { conCategory1s: categoryData },
-  } = await axios.get(`${process.env.BASE_URL}/api/category`);
+  } = await axios.get('https://api2.ncnc.app/con-category1s');
 
   const {
     data: { conItems: ddangData },
-  } = await axios.get(`${process.env.BASE_URL}/api/ddang`);
+  } = await axios.get('https://api2.ncnc.app/con-items/soon');
   return {
     props: {
       categoryData,

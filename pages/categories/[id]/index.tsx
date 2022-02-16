@@ -105,7 +105,9 @@ const Categories = (props) => {
 export async function getServerSideProps() {
   const {
     data: { conCategory1s: brandData },
-  } = await axios.get(`${process.env.BASE_URL}/api/brand`);
+  } = await axios.get(
+    'https://api2.ncnc.app/con-category1s/$conCategory1Id/nested'
+  );
   return {
     props: {
       brandData,
