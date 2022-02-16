@@ -39,8 +39,7 @@ const Container = styled.div`
 
 const Wrapper = styled.div`
   display: flex;
-  width: '300vw';
-  overflow: 'hidden';
+  width: 300vw;
   ${(props: WrapperProps) =>
     props.index && `transform : translate(-${(props.index - 1) * 375}px);`}
   transition: transform .6s ease-in-out;
