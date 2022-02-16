@@ -8,6 +8,7 @@
 
 ## 2. 배포 링크
 
+https://musing-jepsen-f016f9.netlify.app
 
 
 ## 3. 팀원 소개
