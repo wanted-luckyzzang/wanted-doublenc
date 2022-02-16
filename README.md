@@ -1,14 +1,13 @@
 
 ## 1. 프로젝트 소개
 
-- 주제 : 메신저
-- 기간 : 22.02.10 ~ 22.02.12
+- 주제 : 기프티콘 거래 app
+- 기간 : 22.02.14 ~ 22.02.16
 
 
 
 ## 2. 배포 링크
 
-https://luckyzzang-swit-messenger.netlify.app/
 
 
 ## 3. 팀원 소개
@@ -18,15 +17,11 @@ https://luckyzzang-swit-messenger.netlify.app/
   <tr align="center">
     <td><a href='https://github.com/Jiyong95'>이지용</a></td>
     <td><a href="https://github.com/BByungs">안병진</a></td>
-    <td><a href="https://github.com/Yena-Yun">윤예나</a></td>
-    <td><a href="https://github.com/minjuice1">박민주</a></td>
   </tr>
 
   <tr align="center">
     <td><img src="https://avatars.githubusercontent.com/u/49055628?v=4" width="150px"/></td>
     <td><img src="https://avatars.githubusercontent.com/u/81910935?v=4"  width="150px"/></td>
-    <td><img src="https://avatars.githubusercontent.com/u/68722179?v=4" width="150px"/></td>
-    <td><img src="https://avatars.githubusercontent.com/u/82799961?v=4" width="150px"/></td>
   </tr>
 </table>
 
@@ -85,9 +80,7 @@ https://luckyzzang-swit-messenger.netlify.app/
 
 ## 8. 커밋 컨벤션
 
-깃모지를 사용하여 이모티콘만 보고 커밋의 목적이나 의도를 쉽게 식별할 수 있도록 하였습니다.
-
-| 깃모지 | 사용 예시 |
+|  | 사용 예시 |
 | --- | --- |
 | feat | 기능 구현 |
 | design | CSS 스타일링 |
