@@ -4,6 +4,7 @@ import { Img, Row, Text } from './common';
 type HeaderProps = {
   imageUrl: string;
   text?: string;
+  setMyPageOpen: (myPageOpen: boolean) => void;
 };
 
 const Header = (props: HeaderProps) => {
@@ -20,6 +21,7 @@ const Header = (props: HeaderProps) => {
       <Img
         src={props.imageUrl}
         alt="HeaderIcon"
+        onClick={() => props.setMyPageOpen(true)}
         sx={{
           ...IS.BIGMENU,
           marginRight: '98px',
