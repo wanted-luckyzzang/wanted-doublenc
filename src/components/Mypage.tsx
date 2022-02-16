@@ -6,12 +6,12 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
   ${BC.LIGHTGRAY}
   width: 375px;
-  margin-left: -10.5px;
+  position: relative;
   overflow: hidden;
   display: none;
   ${(props: { open: boolean }) =>
     props.open && {
-      transform: 'translate(413px)',
+      transform: 'translate(532.5px)',
       display: 'block',
     }}
 `;
