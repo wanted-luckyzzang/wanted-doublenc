@@ -1,3 +1,3 @@
 import styleReturn from './styleReturn';
-
-export default styleReturn;
+import formatDate from './formatDate';
+export default { styleReturn, formatDate };

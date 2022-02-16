@@ -1,5 +1,10 @@
+import { ObjStringStyle, PaletteType } from '.';
+
 export type Root = Root2[];
 
+export interface Root3 extends Root2 {
+  options: PaletteType[] | ObjStringStyle;
+}
 export interface Root2 {
   id: number;
   name: string;
@@ -20,7 +25,7 @@ export interface Root2 {
   isOnlyAccount: number;
   conCategory2Id: number;
   imageUrl: string;
-  options?: string[];
+
   conCategory2: ConCategory2;
 }
 

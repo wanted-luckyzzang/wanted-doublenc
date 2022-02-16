@@ -1,5 +1,5 @@
 import { PaletteType } from 'src/types';
-import styleReturn from 'src/utils';
+import styleReturn from 'src/utils/styleReturn';
 
 const Color: PaletteType = {
   BLACK: styleReturn('color', '#000000'),

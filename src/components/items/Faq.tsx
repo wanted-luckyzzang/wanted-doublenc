@@ -1,42 +1,52 @@
+import { useSelector } from 'react-redux';
 import { C, FS } from 'src/constants';
+import { StoreState } from 'src/store';
 import { Root2 } from 'src/types';
-import { Col, Text } from '../common';
+import styled from 'styled-components';
+import { Col, Row, Text } from '../common';
 
 const Faq = (props: { data: Root2 }): JSX.Element => {
   const parsing = props.data.warning.split('\n');
   const part1 = [...parsing.slice(1, 4), ...parsing.slice(6, 7)];
   const part2 = parsing.slice(-2);
+  const modalState = useSelector((state: StoreState) => state.modal);
 
   return (
-    <Col>
-      <div>
+    <Wrapper modal={modalState.value}>
+      <Row sx={{ marginBottom: '20px' }}>
         <Text sx={{ ...FS.EXPLAIN }}>유의사항</Text>
-      </div>
-      <div>
+      </Row>
+      <Col sx={{ marginBottom: '10px' }}>
         {part1.map((e, idx) => {
           return (
-            <div key={idx}>
+            <Row key={idx} sx={{ marginBottom: '10px' }}>
               <Text>·</Text>
               <Text sx={{ ...FS.ICON, ...C.LIGHTGRAY }}>{e.substring(3)}</Text>
-            </div>
+            </Row>
           );
         })}
-      </div>
-      <div>
+      </Col>
+      <Row sx={{ marginBottom: '20px' }}>
         <Text sx={{ ...FS.EXPLAIN }}>환불규정</Text>
-      </div>
+      </Row>
       <div>
         {part2.map((e, idx) => {
           return (
-            <div key={idx}>
+            <Row key={idx} sx={{ marginBottom: '10px' }}>
               <Text>·</Text>
               <Text sx={{ ...FS.ICON, ...C.LIGHTGRAY }}>{e.substring(3)}</Text>
-            </div>
+            </Row>
           );
         })}
       </div>
-    </Col>
+    </Wrapper>
   );
 };
+
+const Wrapper = styled.div`
+  padding: 20px 21px;
+  background-color: ${(props: { modal: boolean }) =>
+    !props.modal ? 'white' : '#CCCCCC'};
+`;
 
 export default Faq;

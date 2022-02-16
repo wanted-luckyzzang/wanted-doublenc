@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { Col } from 'src/components/common';
-import { Button, Card, Faq, Header } from 'src/components/items';
+import { Button, Card, Faq, Header, Modal } from 'src/components/items';
 import { Root2 } from 'src/types';
 
 const Items = () => {
@@ -31,6 +31,7 @@ const Items = () => {
         <>
           <Card data={productData} />
           <Faq data={productData} />
+          <Modal data={productData} />
           <Button data={productData} />
         </>
       )}

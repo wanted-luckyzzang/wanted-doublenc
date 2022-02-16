@@ -1,5 +1,5 @@
 import { PaletteType } from 'src/types';
-import styleReturn from 'src/utils';
+import styleReturn from 'src/utils/styleReturn';
 
 const IconSize: PaletteType = {
   MAINLIST: styleReturn('width', '43px', 'height', '43px'),
