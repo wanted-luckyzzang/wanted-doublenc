@@ -35,4 +35,5 @@ const Dot = styled.div`
   border-radius: 50%;
   width: 9px;
   height: 9px;
+  cursor: pointer;
 `;
