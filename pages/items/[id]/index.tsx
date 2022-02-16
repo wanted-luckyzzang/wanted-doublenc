@@ -1,8 +1,9 @@
 import axios from 'axios';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import { Col } from 'src/components/common';
+import { Col, Row } from 'src/components/common';
 import { Button, Card, Faq, Header, Modal } from 'src/components/items';
+import { BC } from 'src/constants';
 import { Root2 } from 'src/types';
 
 const Items = () => {
@@ -25,16 +26,24 @@ const Items = () => {
   }, []);
   console.log('dddd', productData);
   return (
-    <Col>
-      <Header imageUrl="/images/Back.svg" />
-      {productData && (
-        <>
-          <Card data={productData} />
-          <Faq data={productData} />
-          <Modal data={productData} />
-          <Button data={productData} />
-        </>
-      )}
+    <Col sx={{ width: '100%', ...BC.GRAY }}>
+      <Col
+        sx={{
+          ...BC.WHITE,
+          width: '375px',
+          margin: '0 auto',
+        }}
+      >
+        <Header imageUrl="/images/Back.svg" />
+        {productData && (
+          <>
+            <Card data={productData} />
+            <Faq data={productData} />
+            <Modal data={productData} />
+            <Button data={productData} />
+          </>
+        )}
+      </Col>
     </Col>
   );
 };

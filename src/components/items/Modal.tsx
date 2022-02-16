@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { C, FS, FW } from 'src/constants';
+import { BC, C, FS, FW } from 'src/constants';
 import { StoreState } from 'src/store';
 import { ObjStringStyle } from 'src/types';
 import formatDate from 'src/utils/formatDate';
@@ -13,18 +13,46 @@ const Modal = (props: { data: any }): JSX.Element => {
       {!modalState.value ? (
         <Empty />
       ) : (
-        <Col>
-          <div>
-            <Text sx={{ ...FS.EXPLAIN, ...FW.SMALL }}>옵션 선택하기</Text>
-          </div>
+        <Col sx={{ paddingBottom: '100px' }}>
+          <Text
+            sx={{
+              ...FS.EXPLAIN,
+              ...FW.SMALL,
+              ...BC.LIGHTGRAY,
+              height: '49px',
+              padding: '17px 0 16px 17px',
+            }}
+          >
+            옵션 선택하기
+          </Text>
+
           {props.data.options.map((el: ObjStringStyle, idx: number) => (
-            <Row key={idx}>
-              <Col>
-                <Text sx={{ ...FS.ICON, ...C.LIGHTGRAY }}>유효기간</Text>
-                <Text sx={{ ...FS.ICON, ...C.LIGHTGRAY }}>할인가</Text>
+            <Row key={idx} sx={{ alignItems: 'center' }}>
+              <Col
+                sx={{
+                  height: '61px',
+                  padding: '12px 0 12px 17px',
+                  marginRight: '10px',
+                }}
+              >
+                <Text
+                  sx={{
+                    ...FS.ICON,
+                    ...C.LIGHTGRAY,
+                    ...BC.WHITE,
+                    marginBottom: '5px',
+                  }}
+                >
+                  유효기간
+                </Text>
+                <Text sx={{ ...FS.ICON, ...C.LIGHTGRAY, ...BC.WHITE }}>
+                  할인가
+                </Text>
               </Col>
-              <Col>
-                <Text sx={{ ...FS.TITLE }}>{formatDate(el.expireAt)}</Text>
+              <Col sx={{ justifyContent: 'center', marginRight: '60px' }}>
+                <Text sx={{ ...FS.TITLE, marginBottom: '5px' }}>
+                  {formatDate(el.expireAt)}
+                </Text>
                 <Text sx={{ ...FS.TITLE }}>
                   {`${el.sellingPrice.toLocaleString()}원`}
                 </Text>

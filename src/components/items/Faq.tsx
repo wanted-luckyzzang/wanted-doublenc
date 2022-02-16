@@ -46,7 +46,7 @@ const Faq = (props: { data: Root2 }): JSX.Element => {
 const Wrapper = styled.div`
   padding: 20px 21px;
   background-color: ${(props: { modal: boolean }) =>
-    !props.modal ? 'white' : '#CCCCCC'};
+    !props.modal ? 'white' : '#999999'};
 `;
 
 export default Faq;

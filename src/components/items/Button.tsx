@@ -15,7 +15,7 @@ const Button = (props: { data: any }): JSX.Element => {
     <Col
       sx={{
         position: 'fixed',
-        width: '100%',
+        width: '375px',
         bottom: '0px',
         cursor: 'pointer',
       }}
@@ -33,7 +33,7 @@ const Button = (props: { data: any }): JSX.Element => {
           }}
         >
           <Text sx={{ ...FS.HEAD, ...FW.SMALL, ...C.WHITE }}>
-            옵션 선택하기
+            {!modalState?.value ? '옵션 선택하기' : '구매하기'}
           </Text>
         </Row>
       </Wrapper>
