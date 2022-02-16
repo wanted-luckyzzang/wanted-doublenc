@@ -1,13 +1,14 @@
+import { useRouter } from 'next/router';
+import { Img, Row, Text } from 'src/components/common';
 import { BC, C, FS, FW, IS } from 'src/constants';
-import { Img, Row, Text } from './common';
 
-type HeaderProps = {
+type BrandsHeaderProps = {
   imageUrl: string;
   text?: string;
-  setMyPageOpen: (myPageOpen: boolean) => void;
 };
 
-const Header = (props: HeaderProps) => {
+const BrandsHeader = (props: BrandsHeaderProps) => {
+  const router = useRouter();
   return (
     <Row
       sx={{
@@ -21,7 +22,7 @@ const Header = (props: HeaderProps) => {
       <Img
         src={props.imageUrl}
         alt="HeaderIcon"
-        onClick={() => props.setMyPageOpen(true)}
+        onClick={() => router.push('/categories/1')}
         sx={{
           ...IS.BIGMENU,
           marginRight: '98px',
@@ -49,4 +50,4 @@ const Header = (props: HeaderProps) => {
   );
 };
 
-export default Header;
+export default BrandsHeader;
