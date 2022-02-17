@@ -1,12 +1,10 @@
 import axios from 'axios';
-import { useRouter } from 'next/router';
-import { useState } from 'react';
+import Link from 'next/link';
 import { Col, Img, Row, Text } from 'src/components/common';
 import { BC, C, FS, FW, IS } from 'src/constants';
 import styled from 'styled-components';
 
 const Qas = (props) => {
-  const router = useRouter();
   return (
     <Col sx={{ width: '100%', ...BC.GRAY }}>
       <Col
@@ -34,12 +32,20 @@ const Qas = (props) => {
           >
             <Text></Text>
             <Text sx={{ ...FW.BIG, ...FS.EXPLAIN, ...C.BLACK }}>고객센터</Text>
-            <Img
-              src="/images/close.svg"
-              alt="close"
-              sx={{ ...IS.BIGMENU, cursor: 'pointer' }}
-              onClick={() => router.push('/')}
-            />
+            <Link
+              href={{
+                pathname: '/',
+              }}
+              as={'/'}
+            >
+              <a>
+                <Img
+                  src="/images/close.svg"
+                  alt="close"
+                  sx={{ ...IS.BIGMENU, cursor: 'pointer' }}
+                />
+              </a>
+            </Link>
           </Row>
           <Row sx={{ ...BC.WHITE, height: '30px' }} />
           <Row>
