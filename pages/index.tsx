@@ -18,29 +18,30 @@ const Main = ({ categoryData, ddangData }: MainProps): JSX.Element => {
   const [myPageOpen, setMyPageOpen] = useState<boolean>(false);
 
   return (
-    <Row sx={{ overflow: 'hidden' }}>
-      <div style={{ zIndex: '999', position: 'absolute' }}>
-        <Mypage myPageOpen={myPageOpen} />
-      </div>
-      <Col sx={{ width: '100%', ...BC.GRAY }}>
-        <Col
-          sx={{
-            width: '375px',
-            margin: '0 auto',
-            ...BC.LIGHTGRAY,
-            overflow: 'hidden',
-          }}
-        >
-          <Header
-            imageUrl="/images/hamberger.svg"
-            text="니콘내콘"
-            setMyPageOpen={setMyPageOpen}
-          />
-          <SlickSlider />
-          <Category categoryData={categoryData} />
-          <DDang data={ddangData} />
+    <Row>
+      {myPageOpen ? (
+        <Mypage />
+      ) : (
+        <Col sx={{ width: '100%', ...BC.GRAY }}>
+          <Col
+            sx={{
+              width: '375px',
+              margin: '0 auto',
+              ...BC.LIGHTGRAY,
+              overflow: 'hidden',
+            }}
+          >
+            <Header
+              imageUrl="/images/hamberger.svg"
+              text="니콘내콘"
+              setMyPageOpen={setMyPageOpen}
+            />
+            <SlickSlider />
+            <Category categoryData={categoryData} />
+            <DDang data={ddangData} />
+          </Col>
         </Col>
-      </Col>
+      )}
     </Row>
   );
 };
