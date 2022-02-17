@@ -119,20 +119,4 @@ const Categories = (props) => {
   );
 };
 
-<<<<<<< HEAD
-=======
-export async function getServerSideProps() {
-  const {
-    data: { conCategory1s: brandData },
-  } = await axios.get(
-    'https://api2.ncnc.app/con-category1s/$conCategory1Id/nested'
-  );
-  return {
-    props: {
-      brandData,
-    },
-  };
-}
-
->>>>>>> 645d0336520b2005ad65feb11d2536145dbf5961
 export default Categories;
