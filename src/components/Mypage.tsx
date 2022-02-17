@@ -1,26 +1,12 @@
 import { useRouter } from 'next/router';
 import { BC, C, FS, FW } from 'src/constants';
 import { Col, Img, Row, Text } from './common';
-import styled from 'styled-components';
 
-const Wrapper = styled.div`
-  ${BC.LIGHTGRAY}
-  width: 375px;
-  position: relative;
-  overflow: hidden;
-  display: none;
-  ${(props: { open: boolean }) =>
-    props.open && {
-      transform: 'translate(532.5px)',
-      display: 'block',
-    }}
-`;
-
-const Mypage = (props: { myPageOpen: boolean }) => {
+const Mypage = () => {
   const router = useRouter();
   return (
-    <div style={{ ...BC.GRAY }}>
-      <Wrapper open={props.myPageOpen}>
+    <Col sx={{ width: '100%', ...BC.GRAY }}>
+      <Col sx={{ width: '375px', margin: '0 auto', ...BC.LIGHTGRAY }}>
         <Row
           sx={{
             width: '375px',
@@ -65,9 +51,9 @@ const Mypage = (props: { myPageOpen: boolean }) => {
             onClick={() => router.push('/qas')}
           />
         </Row>
-        <Col sx={{ ...BC.WHITE, height: '100vh' }} />
-      </Wrapper>
-    </div>
+      </Col>
+      <Col sx={{ ...BC.WHITE, height: '100vh' }} />
+    </Col>
   );
 };
 

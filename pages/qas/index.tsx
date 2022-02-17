@@ -1,11 +1,10 @@
 import axios from 'axios';
-import { useState } from 'react';
-import { Col, Row, Text } from 'src/components/common';
-import { BC, C, FS, FW } from 'src/constants';
+import Link from 'next/link';
+import { Col, Img, Row, Text } from 'src/components/common';
+import { BC, C, FS, FW, IS } from 'src/constants';
 import styled from 'styled-components';
 
 const Qas = (props) => {
-  console.log(props.data.qaTypes);
   return (
     <Col sx={{ width: '100%', ...BC.GRAY }}>
       <Col
@@ -15,13 +14,48 @@ const Qas = (props) => {
           margin: '0 auto',
         }}
       >
-        <Row sx={{ ...BC.WHITE, height: '30px' }} />
-        <Col sx={{ marginLeft: '17px', height: '165px', marginBottom: '5px' }}>
-          <Text
-            sx={{ ...FW.SMALL, ...FS.HEAD, ...C.BLACK, marginBottom: '5px' }}
+        <Col
+          sx={{
+            marginLeft: '17px',
+            marginRight: '17px',
+            height: '165px',
+            marginBottom: '5px',
+          }}
+        >
+          <Row sx={{ ...BC.WHITE, height: '20px' }} />
+          <Row
+            sx={{
+              alignItems: 'center',
+              width: '100%',
+              justifyContent: 'space-between',
+            }}
           >
-            상담시간 안내
-          </Text>
+            <Text></Text>
+            <Text sx={{ ...FW.BIG, ...FS.EXPLAIN, ...C.BLACK }}>고객센터</Text>
+            <Link
+              href={{
+                pathname: '/',
+              }}
+              as={'/'}
+            >
+              <a>
+                <Img
+                  src="/images/close.svg"
+                  alt="close"
+                  sx={{ ...IS.BIGMENU, cursor: 'pointer' }}
+                />
+              </a>
+            </Link>
+          </Row>
+          <Row sx={{ ...BC.WHITE, height: '30px' }} />
+          <Row>
+            <Text
+              sx={{ ...FW.SMALL, ...FS.HEAD, ...C.BLACK, marginBottom: '5px' }}
+            >
+              상담시간 안내
+            </Text>
+          </Row>
+
           <Text
             sx={{ ...FW.SMALL, ...FS.EXPLAIN, ...C.BLACK, marginBottom: '5px' }}
           >
@@ -80,9 +114,7 @@ const SellText = styled.span``;
 export default Qas;
 
 export async function getServerSideProps() {
-  const { data: data } = await axios.get(
-    `${process.env.BASE_URL}/api/faq/type`
-  );
+  const { data: data } = await axios.get('https://api2.ncnc.app/qa-types');
   return {
     props: {
       data,
