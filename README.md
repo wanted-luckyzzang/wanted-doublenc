@@ -45,7 +45,6 @@ https://musing-jepsen-f016f9.netlify.app
     
 ## 5. 기술 스택
 ![Typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Next.js](https://img.shields.io/badge/NextJS-DB7093?style=for-the-badge&logo=nextjs&logoColor=white) 
 
 
